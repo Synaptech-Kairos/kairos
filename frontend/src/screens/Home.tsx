@@ -22,7 +22,7 @@ export default function Home() {
         ></img>
       </div> */}
 
-      <div className="dashboard-container">
+      <div className="dashboard-container m-5 w-full">
 
         {/* Greeting */}
         <header className="greeting-section">
