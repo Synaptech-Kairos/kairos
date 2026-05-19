@@ -1,3 +1,5 @@
+import timer from "../../../public/timer.svg"
+
 type QuickStartButtonProps = {
   label: string
 }
@@ -5,9 +7,14 @@ type QuickStartButtonProps = {
 export default function QuickStartButton({label} : QuickStartButtonProps) {
   return (
     <button
-      className="px-4 py-2 rounded-lg bg-gray-200 hover:bg-slate-700 text-sm font-medium"
+      className="px-4 py-2 rounded-lg bg-gray-200  hover:bg-slate-700 text-2xl! font-medium border-gray-400 border flex items-center gap-1"
       // onClick={() => onClick()}
     >
+      <img
+        src={timer}
+        alt="timer"
+        className="w-4 h-4"
+      />
       {label}
     </button>
   );

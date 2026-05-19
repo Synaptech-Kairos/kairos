@@ -1,6 +1,7 @@
 // import { useState } from "react";
 import "../App.css";
 import logo from "../../public/favicon.svg";
+import SquigglyLine from "../components/home/SquigglyLine.js";
 
 import QuickStartButton from "../components/home/QuickStartButton.js";
 
@@ -13,20 +14,22 @@ export default function Home() {
   // html
   return (
     <>
-      <div>
+      {/* <div>
         <img
           src={logo}
           alt="kairos logo"
           className="w-20 h-auto absolute top-4 left-4"
         ></img>
-      </div>
+      </div> */}
 
       <div className="dashboard-container">
 
         {/* Greeting */}
         <header className="greeting-section">
-          <h2 className="greeting text-left">Good evening, {name}</h2>
+          <h2 className="greeting text-left text-3xl!">Good evening, {name}</h2>
         </header>
+        <SquigglyLine/>
+
 
         {/* Main Content */}
         <main>
@@ -43,6 +46,12 @@ export default function Home() {
               />
               <QuickStartButton
                 label="15:00"
+              />
+              <QuickStartButton
+                label="10:00"
+              />
+              <QuickStartButton
+                label="5:00"
               />
             </div>
           </section>
