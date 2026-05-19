@@ -1,14 +1,71 @@
-import { useState } from "react";
-import '../App.css'
+// import { useState } from "react";
+import "../App.css";
+import logo from "../../public/favicon.svg";
+
+import QuickStartButton from "../components/home/QuickStartButton.js";
+
+import { getUserInfo } from "../lib/user.js";
 
 export default function Home() {
-  // states
-
+  const { name } = getUserInfo();
+  // statess
 
   // html
   return (
     <>
-    <h1>Home Page</h1>
+      <div>
+        <img
+          src={logo}
+          alt="kairos logo"
+          className="w-20 h-auto absolute top-4 left-4"
+        ></img>
+      </div>
+
+      <div className="dashboard-container">
+
+        {/* Greeting */}
+        <header className="greeting-section">
+          <h2 className="greeting text-left">Good evening, {name}</h2>
+        </header>
+
+        {/* Main Content */}
+        <main>
+          {/* Quick Start */}
+          <section>
+            <h3>Quick Start</h3>
+            <div className="flex gap-3">
+              {/* TODO: quickstart timer buttons*/}
+              <QuickStartButton
+                label="1:00:00"
+              />
+              <QuickStartButton
+                label="30:00"
+              />
+              <QuickStartButton
+                label="15:00"
+              />
+            </div>
+          </section>
+
+          {/* Stats */}
+          <section>
+            <h3 className="text-sm">My stats</h3>
+
+            <div>
+
+              {/* Consistency Widget */}
+              <div>
+                {/* TODO: */}
+              </div>
+
+              {/* Recent Session Card */}
+              <div>
+                {/* TODO: */}
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
     </>
   );
 }
