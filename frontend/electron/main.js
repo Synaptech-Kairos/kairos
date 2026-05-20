@@ -7,14 +7,15 @@ const __dirname = path.dirname(__filename);
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
-    width: 1024,
-    height: 768,
+
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
       contextIsolation: true,
       nodeIntegration: false,
     },
   });
+
+  mainWindow.maximize();
 
   const isDev = process.env.NODE_ENV !== "production";
   const devUrl = process.env.VITE_DEV_SERVER_URL || "http://localhost:5173";
