@@ -4,7 +4,7 @@
 // import heroImg from './assets/hero.png'
 import { Routes, Route } from 'react-router-dom'
 import Home from './screens/Home'
-
+import Welcome from './screens/onboarding/Welcome'
 
 import './App.css'
 
@@ -12,10 +12,9 @@ function App() {
 
   return (
     <Routes>
-      {/* add screens/pages here */}
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Welcome />} />
+      <Route path="/home" element={<Home />} />
     </Routes>
-
   )
 }
 

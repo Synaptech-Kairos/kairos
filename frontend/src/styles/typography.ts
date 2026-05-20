@@ -1,0 +1,51 @@
+export const typography = {
+  headlineMedium: {
+    fontFamily: 'Unbounded, sans-serif',
+    fontSize: '50px',
+    fontWeight: 400,
+    lineHeight: '100%',
+    letterSpacing: '-0.32px',
+  },
+  titleLarge: {
+    fontFamily: 'Unbounded, sans-serif',
+    fontSize: '25px',
+    fontWeight: 400,
+    lineHeight: '100%',
+    letterSpacing: '-0.25px',
+  },
+  titleMedium: {
+    fontFamily: 'Geist, sans-serif',
+    fontSize: '23px',
+    fontWeight: 500,
+    lineHeight: '100%',
+    letterSpacing: '-0.23px',
+  },
+  titleSmall: {
+    fontFamily: 'Geist, sans-serif',
+    fontSize: '20px',
+    fontWeight: 500,
+    lineHeight: '100%',
+    letterSpacing: '-0.2px',
+  },
+  bodyLarge: {
+    fontFamily: 'Geist, sans-serif',
+    fontSize: '16px',
+    fontWeight: 400,
+    lineHeight: '100%',
+    letterSpacing: '-0.16px',
+  },
+  bodyMedium: {
+    fontFamily: 'Geist, sans-serif',
+    fontSize: '13px',
+    fontWeight: 400,
+    lineHeight: '100%',
+    letterSpacing: '-0.13px',
+  },
+  bodySmall: {
+    fontFamily: 'Geist, sans-serif',
+    fontSize: '11px',
+    fontWeight: 400,
+    lineHeight: '100%',
+    letterSpacing: '-0.11px',
+  },
+} as const;
