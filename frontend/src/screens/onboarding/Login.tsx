@@ -38,7 +38,7 @@ export default function Login() {
       />
 
       {/* Title bar */}
-      <TitleBar />
+      <TitleBar showTitle />
 
       {/* Card container */}
       <div
@@ -90,7 +90,7 @@ export default function Login() {
 
         {/* Buttons */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center', width: '100%' }}>
-          <Button variant="primary">Sign in</Button>
+          <Button variant="primary" onClick={() => navigate('/auth-success')}>Sign in</Button>
           <Button variant="text">Forgot password</Button>
         </div>
       </div>
