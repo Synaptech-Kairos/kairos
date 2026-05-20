@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import iconFocus from '../../assets/icons/icon-focus.svg'
 import iconBiosignal from '../../assets/icons/icon-biosignal.svg'
 import iconIntegration from '../../assets/icons/icon-integration.svg'
@@ -23,12 +24,14 @@ const features = [
 ]
 
 export default function Welcome() {
+  const navigate = useNavigate()
+
   return (
     <div
       className="fixed inset-0 overflow-hidden flex flex-col"
       style={{ backgroundColor: '#FAFAFA' }}
     >
-      {/* Ambient blue blob background */}
+{/* Ambient blue blob background */}
       <div
         className="absolute pointer-events-none"
         style={{
@@ -55,7 +58,7 @@ export default function Welcome() {
         <div className="flex items-end mb-[43px]" style={{ gap: 14 }}>
           <span
             style={{
-              ...typography.headlineMedium,
+              ...typography.headlineLarge,
               color: '#000',
             }}
           >
@@ -64,7 +67,7 @@ export default function Welcome() {
           <img src={kairosLogo} alt="" style={{ width: 82, height: 55, marginBottom: 4 }} />
           <span
             style={{
-              ...typography.headlineMedium,
+              ...typography.headlineLarge,
               color: '#000',
             }}
           >
@@ -80,9 +83,9 @@ export default function Welcome() {
         </div>
 
         {/* Buttons */}
-        <div className="flex flex-col" style={{ gap: 13 }}>
-          <Button variant="primary">Sign in</Button>
-          <Button variant="secondary">Create account</Button>
+        <div className="flex flex-col items-center" style={{ gap: 13 }}>
+          <Button variant="primary" onClick={() => navigate('/login')}>Sign in</Button>
+          <Button variant="secondary" onClick={() => navigate('/create-account')}>Create account</Button>
         </div>
       </div>
     </div>
