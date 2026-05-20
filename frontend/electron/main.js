@@ -7,7 +7,8 @@ const __dirname = path.dirname(__filename);
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
-
+    titleBarStyle: "hiddenInset",
+    trafficLightPosition: { x: 16, y: 20 },
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
       contextIsolation: true,
