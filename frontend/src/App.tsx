@@ -9,6 +9,9 @@ import Login from './screens/onboarding/Login'
 import CreateAccount from './screens/onboarding/CreateAccount'
 import AuthSuccess from './screens/onboarding/AuthSuccess'
 import Customize from './screens/onboarding/Customize'
+import WhatIsKairos from './screens/onboarding/WhatIsKairos'
+import DataDrivenAdapt from './screens/onboarding/DataDrivenAdapt'
+import TrackProgress from './screens/onboarding/TrackProgress'
 import { OnboardingProvider } from './context/OnboardingContext'
 import { ThemeProvider } from './context/ThemeContext'
 
@@ -24,6 +27,9 @@ function App() {
         <Route path="/create-account" element={<CreateAccount />} />
         <Route path="/auth-success" element={<AuthSuccess />} />
         <Route path="/customize" element={<Customize />} />
+        <Route path="/what-is-kairos" element={<WhatIsKairos />} />
+        <Route path="/data-driven-adapt" element={<DataDrivenAdapt />} />
+        <Route path="/track-progress" element={<TrackProgress />} />
         <Route path="/home" element={<Home />} />
       </Routes>
       </ThemeProvider>

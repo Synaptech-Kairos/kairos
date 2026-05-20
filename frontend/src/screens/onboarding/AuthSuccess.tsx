@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import kairosLogo from '../../assets/icons/kairos-logo.svg'
+import kairosLogo from '../../assets/icons/icon-kairos-logo.svg'
 import TitleBar from '../../components/TitleBar'
 import { typography } from '../../styles/typography'
 

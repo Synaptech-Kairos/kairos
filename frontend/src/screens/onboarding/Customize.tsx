@@ -6,8 +6,8 @@ import { useOnboarding } from '../../context/OnboardingContext'
 import { useTheme } from '../../context/ThemeContext'
 import { typography } from '../../styles/typography'
 import { accentColorPairs } from '../../styles/colors'
-import cancelIcon from '../../assets/icons/cancel.svg'
-import nextIcon from '../../assets/icons/next.svg'
+import cancelIcon from '../../assets/icons/icon-cancel.svg'
+import nextIcon from '../../assets/icons/icon-next.svg'
 import themeLightPng from '../../assets/icons/theme-light.png'
 import themeDarkPng from '../../assets/icons/theme-dark.png'
 import themeSystemPng from '../../assets/icons/theme-follow-system.png'
@@ -116,7 +116,7 @@ export default function Customize() {
             <IconButton
               variant="text-start"
               icon={<img src={nextIcon} alt="" style={{ width: 20, height: 20, filter: iconFilter }} />}
-              onClick={() => navigate('/home')}
+              onClick={() => navigate('/what-is-kairos')}
             >
               Next
             </IconButton>

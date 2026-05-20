@@ -1,4 +1,4 @@
-import kairosLogo from '../assets/icons/kairos-logo.svg'
+import kairosLogo from '../assets/icons/icon-kairos-logo.svg'
 import { typography } from '../styles/typography'
 import { useTheme } from '../context/ThemeContext'
 
