@@ -42,7 +42,7 @@ export default function CreateAccount() {
       />
 
       {/* Title bar */}
-      <TitleBar />
+      <TitleBar showTitle />
 
       {/* Card container */}
       <div
@@ -115,7 +115,7 @@ export default function CreateAccount() {
 
         {/* Button */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
-          <Button variant="primary">
+          <Button variant="primary" onClick={() => navigate('/auth-success')}>
             Create account
           </Button>
         </div>
