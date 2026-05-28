@@ -12,6 +12,11 @@ import Customize from './screens/onboarding/Customize'
 import WhatIsKairos from './screens/onboarding/WhatIsKairos'
 import DataDrivenAdapt from './screens/onboarding/DataDrivenAdapt'
 import TrackProgress from './screens/onboarding/TrackProgress'
+import Account from './screens/settings/Account'
+import Notifications from './screens/settings/Notifications'
+import Appearance from './screens/settings/Appearance'
+import Devices from './screens/settings/Devices'
+import ChangePassword from './screens/settings/ChangePassword'
 import { OnboardingProvider } from './context/OnboardingContext'
 import { ThemeProvider } from './context/ThemeContext'
 
@@ -31,6 +36,11 @@ function App() {
         <Route path="/data-driven-adapt" element={<DataDrivenAdapt />} />
         <Route path="/track-progress" element={<TrackProgress />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/account" element={<Account />} />
+        <Route path="/notifications" element={<Notifications />} />
+        <Route path="/appearance" element={<Appearance />} />
+        <Route path="/devices" element={<Devices />} />
+        <Route path="/change-password" element={<ChangePassword />} />
       </Routes>
       </ThemeProvider>
     </OnboardingProvider>
