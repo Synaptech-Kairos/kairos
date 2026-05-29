@@ -1,5 +1,8 @@
-// import { useState } from "react";
-import "../App.css";
+import { useState } from "react";
+import { useNavigate } from 'react-router-dom'
+
+import '../App.css'
+
 import logo from "../../public/favicon.svg";
 import SquigglyLine from "../components/home/SquigglyLine.js";
 import { typography } from '../styles/typography'
@@ -9,8 +12,15 @@ import QuickStartButton from "../components/home/QuickStartButton.js";
 import { getUserInfo } from "../lib/user.js";
 
 export default function Home() {
+  const navigate = useNavigate()
   const { name } = getUserInfo();
   // statess
+
+  // handlers
+  const goToAccount = () => {
+    // navigate to the Account page
+    navigate('/Account')
+  }
 
   // html
   return (
@@ -79,6 +89,13 @@ export default function Home() {
               </div>
             </div>
           </section>
+          
+          {/* Settings Button */}
+          <div>
+            <button onClick={goToAccount} style={{ padding: '10px 20px', fontSize: '16px', cursor: 'pointer' }}>
+              Go to Account
+            </button>
+          </div>
         </main>
       </div>
     </>
