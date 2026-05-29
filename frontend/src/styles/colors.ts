@@ -23,8 +23,8 @@ export const colors = {
   },
 } as const
 
-export type ColorTheme = typeof colors.light
-export type ThemeMode = 'light' | 'dark'
+export type ThemeMode = keyof typeof colors
+export type ColorTheme = typeof colors[ThemeMode]
 
 export const accentColorPairs = [
   { light: '#C6CB88', dark: '#8E925D' }, // yellow

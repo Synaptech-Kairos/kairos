@@ -12,6 +12,8 @@ import Customize from './screens/onboarding/Customize'
 import WhatIsKairos from './screens/onboarding/WhatIsKairos'
 import DataDrivenAdapt from './screens/onboarding/DataDrivenAdapt'
 import TrackProgress from './screens/onboarding/TrackProgress'
+import TimerInProgress from './screens/timer/TimerInProgress'
+import TimerRecap from './screens/timer/TimerRecap'
 import { OnboardingProvider } from './context/OnboardingContext'
 import { ThemeProvider } from './context/ThemeContext'
 
@@ -30,6 +32,8 @@ function App() {
         <Route path="/what-is-kairos" element={<WhatIsKairos />} />
         <Route path="/data-driven-adapt" element={<DataDrivenAdapt />} />
         <Route path="/track-progress" element={<TrackProgress />} />
+        <Route path="/timer" element={<TimerInProgress />} />
+        <Route path="/timer-recap" element={<TimerRecap />} />
         <Route path="/home" element={<Home />} />
       </Routes>
       </ThemeProvider>

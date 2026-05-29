@@ -4,13 +4,15 @@ import { useTheme } from '../context/ThemeContext'
 
 interface TitleBarProps {
   showTitle?: boolean
+  forceLight?: boolean
 }
 
 const isMac = navigator.userAgent.includes('Mac OS X')
 
-export default function TitleBar({ showTitle = false }: TitleBarProps) {
+export default function TitleBar({ showTitle = false, forceLight = false }: TitleBarProps) {
   const { themeColors, effectiveTheme } = useTheme()
-  const stroke = themeColors.inverseContainer
+  const stroke = forceLight ? '#000000' : themeColors.inverseContainer
+  const logoFilter = forceLight ? 'none' : effectiveTheme === 'dark' ? 'invert(1)' : 'none'
 
   return (
     <div
@@ -21,7 +23,7 @@ export default function TitleBar({ showTitle = false }: TitleBarProps) {
         className="flex items-end"
         style={{ gap: 8, ...(isMac && { marginLeft: 70, marginTop: 6 }), WebkitAppRegion: 'no-drag' } as React.CSSProperties}
       >
-        <img src={kairosLogo} alt="Kairōs" style={{ height: 16, width: 'auto', filter: effectiveTheme === 'dark' ? 'invert(1)' : 'none' }} />
+        <img src={kairosLogo} alt="Kairōs" style={{ height: 16, width: 'auto', filter: logoFilter }} />
         {showTitle && (
           <span
             style={{

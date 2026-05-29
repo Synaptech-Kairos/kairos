@@ -1,12 +1,13 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
 import { useOnboarding } from './OnboardingContext'
 import { colors, accentColorPairs } from '../styles/colors'
-import type { ThemeMode } from '../styles/colors'
+import type { ColorTheme, ThemeMode } from '../styles/colors'
 
 interface ThemeContextType {
   effectiveTheme: ThemeMode
-  themeColors: typeof colors.light
+  themeColors: ColorTheme
   currentAccentColor: string
 }
 
