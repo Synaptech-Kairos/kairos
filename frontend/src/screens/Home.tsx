@@ -2,6 +2,7 @@
 import "../App.css";
 import logo from "../../public/favicon.svg";
 import SquigglyLine from "../components/home/SquigglyLine.js";
+import { typography } from '../styles/typography'
 
 import QuickStartButton from "../components/home/QuickStartButton.js";
 
@@ -22,11 +23,16 @@ export default function Home() {
         ></img>
       </div> */}
 
-      <div className="dashboard-container m-5 w-full">
+      <div className="dashboard-container m-5 fixed inset-0 overflow-hidden flex flex-col">
 
         {/* Greeting */}
         <header className="greeting-section">
-          <h2 className="greeting text-left text-3xl!">Good evening, {name}</h2>
+          <h2
+            className="greeting text-left text-3xl!"
+            style={typography.titleLarge}
+          >
+            Good evening, {name}
+          </h2>
         </header>
         <SquigglyLine/>
 
@@ -35,7 +41,7 @@ export default function Home() {
         <main>
           {/* Quick Start */}
           <section>
-            <h3>Quick Start</h3>
+            <h3 className="text-xs" style={typography.bodySmall}>Quick Start</h3>
             <div className="flex gap-3">
               {/* TODO: quickstart timer buttons*/}
               <QuickStartButton
@@ -58,7 +64,7 @@ export default function Home() {
 
           {/* Stats */}
           <section>
-            <h3 className="text-sm">My stats</h3>
+            <h3 className="text-xs" style={typography.bodySmall}>My stats</h3>
 
             <div>
 
