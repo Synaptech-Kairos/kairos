@@ -1,86 +1,111 @@
-// import { useState } from "react";
 import "../App.css";
-import logo from "../../public/favicon.svg";
 import SquigglyLine from "../components/home/SquigglyLine.js";
-import { typography } from '../styles/typography'
-
+import { typography } from "../styles/typography";
 import QuickStartButton from "../components/home/QuickStartButton.js";
-
 import { getUserInfo } from "../lib/user.js";
+import TitleBar from "../components/TitleBar.js";
+import ConsistencyCard from "../components/home/ConsistencyCard.js";
+// import NewSession from "../components/home/NewSession.js";
 
 export default function Home() {
   const { name } = getUserInfo();
-  // statess
 
-  // html
   return (
-    <>
-      {/* <div>
-        <img
-          src={logo}
-          alt="kairos logo"
-          className="w-20 h-auto absolute top-4 left-4"
-        ></img>
-      </div> */}
-
-      <div className="dashboard-container m-5 fixed inset-0 overflow-hidden flex flex-col">
-
+    <div
+      style={{
+        position: 'fixed',
+        inset: 0,
+        overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'column',
+        backgroundColor: '#FAFAFA',
+      }}
+    >
+      {/* <NewSession/> */}
+      <TitleBar/>
+      <div
+        style={{
+          padding: "30px",
+          paddingTop: "60px",
+          position: "fixed",
+          inset: 0,
+          overflow: "hidden",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
         {/* Greeting */}
-        <header className="greeting-section">
+        <header>
           <h2
-            className="greeting text-left text-3xl!"
-            style={typography.titleLarge}
+            style={{
+              ...typography.titleLarge,
+              textAlign: "left"
+            }}
           >
             Good evening, {name}
           </h2>
         </header>
-        <SquigglyLine/>
 
+        <SquigglyLine />
 
         {/* Main Content */}
         <main>
           {/* Quick Start */}
-          <section>
-            <h3 className="text-xs" style={typography.bodySmall}>Quick Start</h3>
-            <div className="flex gap-3">
-              {/* TODO: quickstart timer buttons*/}
-              <QuickStartButton
-                label="1:00:00"
-              />
-              <QuickStartButton
-                label="30:00"
-              />
-              <QuickStartButton
-                label="15:00"
-              />
-              <QuickStartButton
-                label="10:00"
-              />
-              <QuickStartButton
-                label="5:00"
-              />
+          <section
+            style={{
+              marginBottom: "24px"
+            }}
+          >
+            <h3
+              style={{
+                ...typography.bodySmall,
+                fontSize: "12px"
+              }}
+            >
+              Quick Start
+            </h3>
+
+            <div
+              style={{
+                display: "flex",
+                gap: "12px",
+                marginTop: "8px"
+              }}
+            >
+              <QuickStartButton label="1:00:00" />
+              <QuickStartButton label="30:00" />
+              <QuickStartButton label="15:00" />
+              <QuickStartButton label="10:00" />
+              <QuickStartButton label="5:00" />
             </div>
           </section>
 
           {/* Stats */}
           <section>
-            <h3 className="text-xs" style={typography.bodySmall}>My stats</h3>
+            <h3 style={{
+              ...typography.bodySmall,
+              fontSize: "12px"
+              }}
+            >
+              My stats
+            </h3>
 
-            <div>
-
+            <div
+              style={{
+                marginTop: "12px"
+              }}
+            >
               {/* Consistency Widget */}
-              <div>
-                {/* TODO: */}
-              </div>
+              <ConsistencyCard/>
 
               {/* Recent Session Card */}
               <div>
-                {/* TODO: */}
+                {/* TODO */}
               </div>
             </div>
           </section>
         </main>
       </div>
-    </>
+    </div>
   );
 }
