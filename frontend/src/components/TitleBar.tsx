@@ -12,8 +12,6 @@ export default function TitleBar({ showTitle = false }: TitleBarProps) {
   const { themeColors, effectiveTheme } = useTheme()
   const stroke = themeColors.inverseContainer
 
-
-
   return (
     <div className="relative z-10 w-full flex items-center justify-between">
 
